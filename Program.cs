@@ -1,4 +1,5 @@
-﻿CreateFillArray();
+﻿string[] originalArray = CreateFillArray();
+PrintArray(originalArray);
 
 string[] CreateFillArray()
 {
@@ -8,8 +9,17 @@ string[] CreateFillArray()
     string line;
     for (int i = 0; i < array.Length; i++)
     {
-        System.Console.WriteLine($"Enter the {i+1} element:");
+        System.Console.WriteLine($"Enter the {i + 1} element:");
         array[i] = Console.ReadLine();
     }
     return array;
+}
+
+void PrintArray(string[] array)
+{
+    System.Console.WriteLine("The array is: ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]} ");
+    }
 }
